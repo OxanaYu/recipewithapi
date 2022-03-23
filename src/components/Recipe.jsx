@@ -3,6 +3,7 @@ import {RecipiesContext} from '../context/GeneralContext'
 import {CardMedia,Grid,Tab}  from '@mui/material'
 import {TabPanel,TabList,TabContext} from '@mui/lab'
 import {useParams} from 'react-router-dom'
+import DrawerMenu from './Drawer'
 
 
 function Recipe(){
@@ -17,6 +18,7 @@ function Recipe(){
 
     return(
         <Grid container spacing={2}>
+            <DrawerMenu/>
             <Grid item xs={12} md={6}>
                 <h1>{recipe}</h1>
                 <CardMedia component="img" image={data[0].recipe.image} alt={recipe}/>
